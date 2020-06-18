@@ -57,6 +57,7 @@ public class FirstAssignment {
         stack.pop();
         System.out.println(stack);
         System.out.println("");
+        System.out.println("RandomQueue");
         RandomQueue<String> rq = new RandomQueue<>();
         rq.add("1");
         rq.add("2");
@@ -64,6 +65,35 @@ public class FirstAssignment {
         rq.add("4");
         System.out.println(rq);
         System.out.println(rq.remove());
+        System.out.println("");
+        System.out.println("Bag");
+        Bag<String> bag = new Bag();
+        bag.add("USA");
+        bag.add("CANADA");
+        bag.add("BRASIL");
+        bag.add("USA");
+        System.out.println(bag);
+        System.out.println(bag.findAll("USA"));
+        System.out.println(bag.remove("USA"));
+        System.out.println(bag);
+        System.out.println(bag.findAll("USA"));
+        System.out.println("");
+        System.out.println("MinStack");
+        MinStack<Integer> min = new MinStack<>(((Integer i1,Integer i2) -> i1 - i2));
+        min.push(10);
+        min.push(3);
+        min.push(2);
+        min.push(5);
+        min.push(1);
+        min.push(4);
+        System.out.println(min);
+        System.out.println(min.getMin());
+        min.pop();
+        min.pop();
+        System.out.println(min);
+        System.out.println(min.getMin());
+        
+        
     }
     
 }

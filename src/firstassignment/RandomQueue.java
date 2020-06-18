@@ -39,7 +39,7 @@ public class RandomQueue<E> {
 
     private int random(int max){ //Generates random number 
         Random rand = new Random();
-        int rd = rand.nextInt(max + 1) ;   
+        int rd = rand.nextInt(max) ;   
         return rd;
     }
     
