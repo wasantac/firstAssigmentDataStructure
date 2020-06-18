@@ -216,32 +216,31 @@ public class SimpleLinkedList<E> implements List<E> {
         }
         return q;
     }
+
     //Exercise 2
     public boolean swap(E element) {
-        if(element == this.last.getData()){ //if it is the last itme it will swap with the previos to the last
+        if (element == this.last.getData()) { //if it is the last itme it will swap with the previos to the last
             element = nodeIndex(size - 2).getData();
         }
-        if (element == null || size == 1 ) {
+        if (element == null || size == 1) { //case where there is only one element
             return false;
         } else if (size == 2) {
             Node<E> tmp = first;
             last.setNext(tmp);
             tmp.setNext(null);
             first = last;
-            last = tmp;
-        }else if (element == this.first.getData()) {
+            last = tmp; //swaps first with last
+        } else if (element == this.first.getData()) { //case when the element is the first item
             Node<E> A = nodeIndex(0);
             Node<E> B = A.getNext();
             A.setNext(B.getNext());
             B.setNext(A);
-            this.first = B;
-        }  else if (element == this.last.getData()) {
-            return false;
-        } else {
+            this.first = B;  //swaps the first element with the second element
+       } else { //other cases
             Node<E> A2 = first;
             int cont = 0;
-            while (A2.getNext() != null || A2.getNext().getNext() != null) {
-                if (A2.getData() == element) {
+            while (A2.getNext() != null || A2.getNext().getNext() != null) { //searches for the element
+                if (A2.getData() == element) { //The order of the nodes is A1 - A2 - B1 - B2
                     Node<E> A1 = nodeIndex(cont - 1);
                     A2 = A1.getNext();
                     Node<E> B1 = A2.getNext();
@@ -257,7 +256,5 @@ public class SimpleLinkedList<E> implements List<E> {
         }
         return true;
     }
-
-   
 
 }

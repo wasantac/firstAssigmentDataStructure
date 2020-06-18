@@ -56,13 +56,14 @@ public class FirstAssignment {
         System.out.println(stack);
         stack.pop();
         System.out.println(stack);
-        SimpleLinkedList<Integer> sl2 = new SimpleLinkedList<>();
-        sl2.addLast(1);
-        sl2.addLast(2);
-        sl2.addLast(3);
-        System.out.println(sl2);
-        sl2.swap(3);
-        System.out.println(sl2);
+        System.out.println("");
+        RandomQueue<String> rq = new RandomQueue<>();
+        rq.add("1");
+        rq.add("2");
+        rq.add("3");
+        rq.add("4");
+        System.out.println(rq);
+        System.out.println(rq.remove());
     }
     
 }

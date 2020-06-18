@@ -278,7 +278,7 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
             tmp.setPrevious(last);
             last.setPrevious(null);
             first = last;
-            last = tmp;
+            last = tmp; //swaps first with last
             
         }
         else if(element == this.first.getData()){ //case where the element is the first item
@@ -291,13 +291,13 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
             B.setNext(A);
             A.setPrevious(B);
             C.setPrevious(A);
-            this.first = B; 
+            this.first = B;  //swaps the first element with the second element
         }
-        else{ //case where the element is any item
+        else{ //other cases
             Node<E> A2 = first;
             int cont = 0;
-            while (A2.getNext() != null || A2.getNext().getNext() != null) {
-                if (A2.getData() == element) {
+            while (A2.getNext() != null || A2.getNext().getNext() != null) { //searches for the element
+                if (A2.getData() == element) { //the order of the nodes is A1 - A2 - B1 - B2
                     Node<E> A1 = nodeIndex(cont - 1);
                     A2 = A1.getNext();
                     Node<E> B1 = A2.getNext();
