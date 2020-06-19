@@ -17,23 +17,13 @@ public class FirstAssignment {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MyStack stack = new MyStack();
+        
         DoblyLinkedList<String> db = new DoblyLinkedList<>();
         db.addLast("1st");
         db.addLast("2nd");
         db.addLast("3rd");
         db.addLast("4th");
-        SimpleLinkedList<Integer> sl = new SimpleLinkedList<>();
-        sl.addLast(1);
-        sl.addLast(2);
-        sl.addLast(3);
-        sl.addLast(4);
-        sl.addLast(5);
-        sl.addLast(6);
-        sl.swap(2);
-        System.out.println("swap simplylinkedlist");
-        System.out.println(sl);
-        System.out.println("");
+
         DoblyLinkedList<Integer> db2 = new DoblyLinkedList<>();
         db2.addLast(1);
         db2.addLast(2);
@@ -49,6 +39,7 @@ public class FirstAssignment {
         System.out.println(db.reverse());
         System.out.println(db);
         System.out.println("");
+        MyStack stack = new MyStack();
         stack.push("1st item");
         stack.push("2nd item");
         stack.push("3rd Item");

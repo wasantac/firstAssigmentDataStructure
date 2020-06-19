@@ -5,17 +5,19 @@
  */
 package firstassignment;
 
+import java.util.Comparator;
+
 /**
  *
  * @author CltControl
  */
-public class SimpleLinkedList<E> implements List<E> {
+public class SimplyLinkedList<E> implements List<E> {
 
     private Node<E> first;
     private Node<E> last;
     private int size;
 
-    public SimpleLinkedList() {
+    public SimplyLinkedList() {
         first = last = null;
         size = 0;
     }
@@ -190,10 +192,10 @@ public class SimpleLinkedList<E> implements List<E> {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null || !(obj instanceof SimpleLinkedList)) {
+        if (obj == null || !(obj instanceof SimplyLinkedList)) {
             return false;
         }
-        SimpleLinkedList<E> other = (SimpleLinkedList<E>) obj;
+        SimplyLinkedList<E> other = (SimplyLinkedList<E>) obj;
         if (this.size != other.size) {
             return false;
         }
@@ -236,7 +238,7 @@ public class SimpleLinkedList<E> implements List<E> {
             A.setNext(B.getNext());
             B.setNext(A);
             this.first = B;  //swaps the first element with the second element
-       } else { //other cases
+        } else { //other cases
             Node<E> A2 = first;
             int cont = 0;
             while (A2.getNext() != null || A2.getNext().getNext() != null) { //searches for the element
@@ -253,6 +255,33 @@ public class SimpleLinkedList<E> implements List<E> {
                 A2 = A2.getNext();
                 cont++;
             }
+        }
+        return true;
+    }
+
+    public boolean deleteMin(Comparator<E> f) {
+        if (size == 0) {
+            return false;
+        }
+        Node<E> node = first;
+        Node<E> min = first;
+        while (node != null) {
+            if (f.compare(min.getData(), node.getData()) > 0) {
+                min = node;
+            }
+            node = node.getNext();
+            System.out.println(min);
+        }
+        if (min.getData() == first.getData()) {
+            removeFirst();
+        } else if (min.getData() == last.getData()) {
+            
+            removeLast();
+        } else {
+            Node<E> prev = getPrevious(min);
+            Node<E> next = min.getNext();
+            prev.setNext(next);
+            min.setData(null);
         }
         return true;
     }

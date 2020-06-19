@@ -27,16 +27,17 @@ public class MinStack<E> {
 
     public boolean push(E element) {
         if (element == null) {
-            return false;
+            return false; //if thereis no element returns null
         }
-        stack.add(element);
+        stack.add(element); //adds element to stack
         if (min.isEmpty()) {
             min.addLast(element);
         } else {
-            if (f.compare(element, min.getLast()) > 0) {
+            if (f.compare(element, min.getLast()) > 0) { //checks if the element is greater or less than the other one
+                //it depends on the comparator
                 min.addLast(min.getLast());
             }
-            else{
+            else{ //adds the other element if it is less than the other one
                 min.addLast(element);
             }
         }
