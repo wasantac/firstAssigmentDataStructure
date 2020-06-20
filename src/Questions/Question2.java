@@ -6,7 +6,7 @@
 package Questions;
 
 import doubleNode.DoblyLinkedList;
-import firstassignment.SimplyLinkedList;
+import SimpleNode.SimplyLinkedList;
 
 /**
  *

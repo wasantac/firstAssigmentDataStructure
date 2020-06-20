@@ -6,7 +6,7 @@
 package Questions;
 
 import firstassignment.MyStack;
-import firstassignment.SimplyLinkedList;
+import SimpleNode.SimplyLinkedList;
 
 /**
  *
