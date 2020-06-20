@@ -48,8 +48,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.addFirst(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -63,8 +62,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.addLast(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -77,8 +75,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.removeFirst();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -91,8 +88,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.removeLast();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -105,8 +101,7 @@ public class SimplyLinkedListTest {
         Object expResult = null;
         Object result = instance.getFirst();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -119,8 +114,7 @@ public class SimplyLinkedListTest {
         Object expResult = null;
         Object result = instance.getLast();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -133,8 +127,7 @@ public class SimplyLinkedListTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -148,8 +141,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.contains(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -164,8 +156,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.set(index, element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -179,8 +170,7 @@ public class SimplyLinkedListTest {
         Object expResult = null;
         Object result = instance.get(index);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -190,11 +180,10 @@ public class SimplyLinkedListTest {
     public void testIsEmpty() {
         System.out.println("isEmpty");
         SimplyLinkedList instance = new SimplyLinkedList();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -209,8 +198,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.insert(index, element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -220,11 +208,10 @@ public class SimplyLinkedListTest {
     public void testToString() {
         System.out.println("toString");
         SimplyLinkedList instance = new SimplyLinkedList();
-        String expResult = "";
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -238,8 +225,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -253,8 +239,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.swap(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -267,8 +252,7 @@ public class SimplyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.deleteMin(null);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

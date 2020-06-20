@@ -59,10 +59,12 @@ public class MinStack<E> {
     }
 
     public E getMin() {
+        if(min.isEmpty()) return null;
         return min.getLast();
     }
 
     public LinkedList<E> getStack() {
+        if(stack.isEmpty()) return null;
         return stack;
     }
 

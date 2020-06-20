@@ -5,6 +5,7 @@
  */
 package firstassignment;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -45,12 +46,16 @@ public class MinStackTest {
     public void testPush() {
         System.out.println("push");
         Object element = null;
-        MinStack instance = null;
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         boolean expResult = false;
         boolean result = instance.push(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -59,12 +64,16 @@ public class MinStackTest {
     @Test
     public void testPop() {
         System.out.println("pop");
-        MinStack instance = null;
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         boolean expResult = false;
         boolean result = instance.pop();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -73,12 +82,16 @@ public class MinStackTest {
     @Test
     public void testSize() {
         System.out.println("size");
-        MinStack instance = null;
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -87,12 +100,16 @@ public class MinStackTest {
     @Test
     public void testGetMin() {
         System.out.println("getMin");
-        MinStack instance = null;
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         Object expResult = null;
         Object result = instance.getMin();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -101,12 +118,16 @@ public class MinStackTest {
     @Test
     public void testGetStack() {
         System.out.println("getStack");
-        MinStack instance = null;
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
         LinkedList expResult = null;
         LinkedList result = instance.getStack();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -115,12 +136,16 @@ public class MinStackTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        MinStack instance = null;
-        String expResult = "";
+        MinStack instance = new MinStack(new Comparator<Object>() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

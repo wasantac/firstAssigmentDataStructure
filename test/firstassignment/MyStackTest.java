@@ -48,8 +48,7 @@ public class MyStackTest {
         boolean expResult = false;
         boolean result = instance.push(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -62,8 +61,7 @@ public class MyStackTest {
         boolean expResult = false;
         boolean result = instance.pop();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -73,11 +71,10 @@ public class MyStackTest {
     public void testIsEmpty() {
         System.out.println("isEmpty");
         MyStack instance = new MyStack();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -90,8 +87,7 @@ public class MyStackTest {
         Object expResult = null;
         Object result = instance.getHead();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -103,8 +99,7 @@ public class MyStackTest {
         Object head = null;
         MyStack instance = new MyStack();
         instance.setHead(head);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -114,11 +109,10 @@ public class MyStackTest {
     public void testToString() {
         System.out.println("toString");
         MyStack instance = new MyStack();
-        String expResult = "";
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -131,8 +125,7 @@ public class MyStackTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

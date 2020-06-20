@@ -119,11 +119,11 @@ public class SimplyLinkedList<E> implements List<E> {
 
     @Override
     public boolean contains(E element) {
-        if (first.getData().equals((element)) || last.getData().equals(element)) {
-            return true;
-        }
         if (isEmpty()) {
             return false;
+        }
+        if (first.getData().equals((element)) || last.getData().equals(element)) {
+            return true;
         } else {
             for (Node<E> q = this.first; q != null; q = q.getNext()) {
                 if (q.getData().equals(element)) {
@@ -145,6 +145,9 @@ public class SimplyLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
+        if (isEmpty()) {
+            return null;
+        }
         Node<E> q = nodeIndex(index);
         return q.getData();
     }
@@ -221,11 +224,11 @@ public class SimplyLinkedList<E> implements List<E> {
 
     //Exercise 2
     public boolean swap(E element) {
-        if (element == this.last.getData()) { //if it is the last itme it will swap with the previos to the last
-            element = nodeIndex(size - 2).getData();
-        }
         if (element == null || size == 1) { //case where there is only one element
             return false;
+        }
+        if (element == this.last.getData()) { //if it is the last itme it will swap with the previos to the last
+            element = nodeIndex(size - 2).getData();
         } else if (size == 2) {
             Node<E> tmp = first;
             last.setNext(tmp);
@@ -274,7 +277,7 @@ public class SimplyLinkedList<E> implements List<E> {
         if (min.getData() == first.getData()) {
             removeFirst();
         } else if (min.getData() == last.getData()) {
-            
+
             removeLast();
         } else {
             Node<E> prev = getPrevious(min);

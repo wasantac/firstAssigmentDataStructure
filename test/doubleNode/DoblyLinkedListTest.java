@@ -41,16 +41,7 @@ public class DoblyLinkedListTest {
     /**
      * Test of hashCode method, of class DoblyLinkedList.
      */
-    @Test
-    public void testHashCode() {
-        System.out.println("hashCode");
-        DoblyLinkedList instance = new DoblyLinkedList();
-        int expResult = 0;
-        int result = instance.hashCode();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+
 
     /**
      * Test of addFirst method, of class DoblyLinkedList.
@@ -63,8 +54,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.addFirst(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -78,8 +68,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.addLast(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -92,8 +81,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.removeFirst();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -106,8 +94,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.removeLast();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -120,8 +107,7 @@ public class DoblyLinkedListTest {
         Object expResult = null;
         Object result = instance.getFirst();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -134,8 +120,7 @@ public class DoblyLinkedListTest {
         Object expResult = null;
         Object result = instance.getLast();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -148,8 +133,7 @@ public class DoblyLinkedListTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -163,8 +147,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.contains(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -179,8 +162,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.set(index, element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -194,8 +176,7 @@ public class DoblyLinkedListTest {
         Object expResult = null;
         Object result = instance.get(index);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -205,11 +186,10 @@ public class DoblyLinkedListTest {
     public void testIsEmpty() {
         System.out.println("isEmpty");
         DoblyLinkedList instance = new DoblyLinkedList();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -224,8 +204,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.insert(index, element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -235,11 +214,10 @@ public class DoblyLinkedListTest {
     public void testToString() {
         System.out.println("toString");
         DoblyLinkedList instance = new DoblyLinkedList();
-        String expResult = "";
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -253,8 +231,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -267,8 +244,7 @@ public class DoblyLinkedListTest {
         Iterator expResult = null;
         Iterator result = instance.iterator();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -281,8 +257,7 @@ public class DoblyLinkedListTest {
         DoblyLinkedList expResult = null;
         DoblyLinkedList result = instance.reverse();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -296,8 +271,7 @@ public class DoblyLinkedListTest {
         boolean expResult = false;
         boolean result = instance.swap(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

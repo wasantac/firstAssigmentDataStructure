@@ -25,15 +25,6 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.first);
-        hash = 79 * hash + Objects.hashCode(this.last);
-        hash = 79 * hash + this.size;
-        return hash;
-    }
-
-    @Override
     public boolean addFirst(E element) {
         Node<E> node = new Node<>(element);
         if (element == null) {
@@ -122,11 +113,11 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
 
     @Override
     public boolean contains(E element) {
-        if (first.getData().equals((element)) || last.getData().equals(element)) {
-            return true;
-        }
         if (isEmpty()) {
             return false;
+        }
+        if (first.getData().equals((element)) || last.getData().equals(element)) {
+            return true;
         } else {
             for (Node<E> q = this.first; q != null; q = q.getNext()) {
                 if (q.getData().equals(element)) {
@@ -148,6 +139,9 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
 
     @Override
     public E get(int index) {
+        if (isEmpty()) {
+            return null;
+        }
         Node<E> q = nodeIndex(index);
         return q.getData();
     }
@@ -226,6 +220,9 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
 
     @Override
     public Iterator<E> iterator() {
+        if (isEmpty()) {
+            return null;
+        }
         Iterator<E> it = new Iterator<E>() {
             private Node<E> p = first;
 
@@ -247,6 +244,7 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
     public DoblyLinkedList<E> reverse() {
         return reverse(this);
     }
+
     //Exercise 5
     private DoblyLinkedList<E> reverse(DoblyLinkedList<E> dobly) { //reverse
         if (dobly.isEmpty()) { //checks first if the LinkedList is empty
@@ -265,13 +263,15 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
 
         return reversed;
     }
+
     //Exercise 2
-    public boolean swap(E element){
-        if(element == this.last.getData()){ //if it is the last itme it will swap with the previos to the last
-            element = nodeIndex(size - 2).getData();
+    public boolean swap(E element) {
+        if (element == null || first == last) {
+            return false;
         }
-        if(element == null || first == last) return false; 
-        else if(size == 2){ //casw where there is only 2 items, it swaps its links
+        if (element == this.last.getData()) { //if it is the last itme it will swap with the previos to the last
+            element = nodeIndex(size - 2).getData();
+        } else if (size == 2) { //casw where there is only 2 items, it swaps its links
             Node<E> tmp = first;
             last.setNext(tmp);
             tmp.setNext(null);
@@ -279,9 +279,8 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
             last.setPrevious(null);
             first = last;
             last = tmp; //swaps first with last
-            
-        }
-        else if(element == this.first.getData()){ //case where the element is the first item
+
+        } else if (element == this.first.getData()) { //case where the element is the first item
             Node<E> A = nodeIndex(0);
             Node<E> B = A.getNext();
             Node<E> C = A.getNext().getNext();
@@ -292,8 +291,7 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
             A.setPrevious(B);
             C.setPrevious(A);
             this.first = B;  //swaps the first element with the second element
-        }
-        else{ //other cases
+        } else { //other cases
             Node<E> A2 = first;
             int cont = 0;
             while (A2.getNext() != null || A2.getNext().getNext() != null) { //searches for the element

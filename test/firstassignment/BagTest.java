@@ -49,8 +49,7 @@ public class BagTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -64,8 +63,7 @@ public class BagTest {
         boolean expResult = false;
         boolean result = instance.add(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -79,8 +77,7 @@ public class BagTest {
         Object expResult = null;
         Object result = instance.remove(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -94,8 +91,7 @@ public class BagTest {
         Object expResult = null;
         Object result = instance.find(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -106,8 +102,7 @@ public class BagTest {
         System.out.println("clear");
         Bag instance = new Bag();
         instance.clear();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -120,8 +115,7 @@ public class BagTest {
         Iterator expResult = null;
         Iterator result = instance.iterator();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -131,11 +125,10 @@ public class BagTest {
     public void testToString() {
         System.out.println("toString");
         Bag instance = new Bag();
-        String expResult = "";
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -149,8 +142,7 @@ public class BagTest {
         ArrayList expResult = null;
         ArrayList result = instance.findAll(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

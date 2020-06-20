@@ -31,6 +31,7 @@ public class RandomQueue<E> {
     }
 
     public E remove() { //Removes random element form the Queue
+        if(arr.isEmpty()) return null;
         int number = random(arr.size());
         E item = arr.get(number);
         arr.remove(number);

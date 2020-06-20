@@ -48,8 +48,7 @@ public class RandomQueueTest {
         boolean expResult = false;
         boolean result = instance.add(element);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -62,8 +61,7 @@ public class RandomQueueTest {
         Object expResult = null;
         Object result = instance.remove();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -76,8 +74,7 @@ public class RandomQueueTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -87,11 +84,10 @@ public class RandomQueueTest {
     public void testToString() {
         System.out.println("toString");
         RandomQueue instance = new RandomQueue();
-        String expResult = "";
+        String expResult = "[]";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

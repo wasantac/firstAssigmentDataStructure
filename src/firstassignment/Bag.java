@@ -76,6 +76,7 @@ public class Bag<E> implements Uset<E> {
 
     @Override
     public Iterator<E> iterator() {
+        if(values.isEmpty()) return null;
         return values.iterator();
     }
 
