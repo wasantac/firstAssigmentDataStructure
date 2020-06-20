@@ -41,7 +41,6 @@ public class MinStack<E> {
                 min.addLast(element);
             }
         }
-        System.out.println(min.toString());
         return true;
     }
 
