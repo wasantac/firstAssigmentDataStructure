@@ -270,7 +270,6 @@ public class SimplyLinkedList<E> implements List<E> {
                 min = node;
             }
             node = node.getNext();
-            System.out.println(min);
         }
         if (min.getData() == first.getData()) {
             removeFirst();
