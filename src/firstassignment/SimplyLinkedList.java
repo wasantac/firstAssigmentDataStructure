@@ -260,7 +260,7 @@ public class SimplyLinkedList<E> implements List<E> {
     }
 
     public boolean deleteMin(Comparator<E> f) {
-        if (size == 0) {
+        if (size == 0 || f == null) {
             return false;
         }
         Node<E> node = first;
