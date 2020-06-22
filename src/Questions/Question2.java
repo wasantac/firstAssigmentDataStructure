@@ -5,8 +5,9 @@
  */
 package Questions;
 
-import doubleNode.DoblyLinkedList;
-import SimpleNode.SimplyLinkedList;
+
+import Swap.DoblySwap;
+import Swap.SimplySwap;
 
 /**
  *
@@ -19,7 +20,7 @@ public class Question2 {
      */
     public static void main(String[] args) {
         //Question 2A
-        SimplyLinkedList<Integer> sl = new SimplyLinkedList<>();
+        SimplySwap<Integer> sl = new SimplySwap<>();
         sl.addLast(1);
         sl.addLast(2);
         sl.addLast(3);
@@ -38,7 +39,7 @@ public class Question2 {
         
         //Question 2B
         System.out.println("swap doblylinkedlist");
-        DoblyLinkedList<Integer> db = new DoblyLinkedList<>();       
+        DoblySwap<Integer> db = new DoblySwap<>();       
         db.addLast(1);
         db.addLast(2);
         db.addLast(3);

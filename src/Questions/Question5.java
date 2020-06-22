@@ -17,7 +17,7 @@ public class Question5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("swap doblylinkedlist");
+        System.out.println("Reverse doblylinkedlist");
         DoblyLinkedList<Integer> db = new DoblyLinkedList<>();       
         db.addLast(1);
         db.addLast(2);
