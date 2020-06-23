@@ -260,18 +260,6 @@ public class DoblyLinkedListTest {
 
     }
 
-    /**
-     * Test of swap method, of class DoblyLinkedList.
-     */
-    @Test
-    public void testSwap() {
-        System.out.println("swap");
-        Object element = null;
-        DoblyLinkedList instance = new DoblyLinkedList();
-        boolean expResult = false;
-        boolean result = instance.swap(element);
-        assertEquals(expResult, result);
 
-    }
     
 }

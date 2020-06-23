@@ -229,19 +229,7 @@ public class SimplyLinkedListTest {
 
     }
 
-    /**
-     * Test of swap method, of class SimplyLinkedList.
-     */
-    @Test
-    public void testSwap() {
-        System.out.println("swap");
-        Object element = null;
-        SimplyLinkedList instance = new SimplyLinkedList();
-        boolean expResult = false;
-        boolean result = instance.swap(element);
-        assertEquals(expResult, result);
 
-    }
 
     /**
      * Test of deleteMin method, of class SimplyLinkedList.

@@ -248,7 +248,7 @@ public class DoblySwap<E> implements List<E>, Iterable<E>{
     }
 
 
-
+    //Question 2B
     public boolean swap(E element) {
         if (element == null || first == last) {
             return false;

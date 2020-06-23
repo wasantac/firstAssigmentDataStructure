@@ -245,7 +245,7 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
         return reverse(this);
     }
 
-    //Exercise 5
+    //Question 5
     private DoblyLinkedList<E> reverse(DoblyLinkedList<E> dobly) { //reverse
         if (dobly.isEmpty()) { //checks first if the LinkedList is empty
             return null;
@@ -264,55 +264,5 @@ public class DoblyLinkedList<E> implements List<E>, Iterable<E> {
         return reversed;
     }
 
-    //Exercise 2
-    public boolean swap(E element) {
-        if (element == null || first == last) {
-            return false;
-        }
-        if (element == this.last.getData()) { //if it is the last itme it will swap with the previos to the last
-            element = nodeIndex(size - 2).getData();
-        } else if (size == 2) { //casw where there is only 2 items, it swaps its links
-            Node<E> tmp = first;
-            last.setNext(tmp);
-            tmp.setNext(null);
-            tmp.setPrevious(last);
-            last.setPrevious(null);
-            first = last;
-            last = tmp; //swaps first with last
-
-        } else if (element == this.first.getData()) { //case where the element is the first item
-            Node<E> A = nodeIndex(0);
-            Node<E> B = A.getNext();
-            Node<E> C = A.getNext().getNext();
-            A.setNext(C);
-            B.setPrevious(null);
-            C.setPrevious(B);
-            B.setNext(A);
-            A.setPrevious(B);
-            C.setPrevious(A);
-            this.first = B;  //swaps the first element with the second element
-        } else { //other cases
-            Node<E> A2 = first;
-            int cont = 0;
-            while (A2.getNext() != null || A2.getNext().getNext() != null) { //searches for the element
-                if (A2.getData() == element) { //the order of the nodes is A1 - A2 - B1 - B2
-                    Node<E> A1 = nodeIndex(cont - 1);
-                    A2 = A1.getNext();
-                    Node<E> B1 = A2.getNext();
-                    Node<E> B2 = B1.getNext();
-                    A1.setNext(B1);
-                    A2.setNext(B2);
-                    B1.setPrevious(A1);
-                    B1.setPrevious(A2);
-                    B1.setNext(A2);
-                    A2.setPrevious(B1);
-                    return true;
-                }
-                A2 = A2.getNext();
-                cont++;
-            }
-        }
-        return true;
-    }
 
 }
